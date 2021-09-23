@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MUSA - Turnos</title>
+    <!-- Lexend Zeta Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Zetta:wght@100;200;300;400&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles/turnos.css">
+    <!-- JS -->
+    <script defer src="../js/turnos.js"></script>
+</head>
+
+<body>
+
+    <header id="container">
+        <nav>
+            <a href="../index.html"><img id="logo" src="../img/logo1.jpg" alt="Logo" /></a>
+            <ul id="nav-left">
+                <li>
+                    <a href="./historia.html">Historia</a>
+                </li>
+                <li>
+                    <a href="./store.html">Store</a>
+                </li>
+                <li>
+                    <a href="#">Servicios</a>
+                </li>
+                <li>
+                    <a href="#">Producciones</a>
+                </li>
+                <li>
+                    <a href="./turnos.html" class="underline">Turnos</a>
+                </li>
+                <li>
+                    <a href="#">Sucursales</a>
+                </li>
+            </ul>
+            <ul id="nav-right">
+                <li>
+                    <a href="./carrito.html"><i class="fas fa-shopping-bag"></i></a>
+                </li>
+            </ul>
+        </nav>
+
+        <div>
+            <img id="img-header" src="../img/portada.jpg" alt="">
+        </div>
+    </header>
+
+    <main id="turnero">
+        <div id="titulo">
+            <h2>Completá el formulario y agendá tu turno!</h2>
+        </div>
+        <div id="formulario">
+            <form>
+                <fieldset>
+                    <legend>Datos Personales</legend>
+                    Nombre: <input type='text' id="nombre">
+                    Apellido: <input type='text' id="apellido">
+                    Edad: <input type="number" id="edad">
+                    Telefono: <input type="tel" id="telefono">
+                    Mail: <input type="email" id="mail">
+                </fieldset>
+                <fieldset>
+                    <legend>Qué servicios querés realizarte?</legend>
+                    Mechas <input type="checkbox" id="mechas"> 
+                    Reflejos <input type="checkbox" id="reflejos">
+                    Color <input type="checkbox" id="color">
+                    Corte <input type="checkbox" id="corte">
+                    Nutrición <input type="checkbox" id="nutricion">
+                    Corrección de color <input type="checkbox" id="correccion">
+                </fieldset>
+                <fieldset>
+                    <legend>Contanos sobre tu cabello</legend>
+                    Ya te teñiste alguna vez? <label for="teñido">Si</label>
+                    <input type="radio" id="teñido" value="si" name="teñido">
+                    <label for="teñido">No</label>
+                    <input type="radio" id="teñido" value="no" name="teñido">
+                    Hace cuánto tiempo? <label for="tiempo">Entre 1 y 3 meses</label>
+                    <input type="radio" id="tiempo" name="tiempo" value="poco">
+                    <label for="tiempo">Entre 3 y 6 meses</label>
+                    <input type="radio" id="tiempo" name="tiempo" value="medio">
+                    <label for="tiempo">Mas de 6 meses</label>
+                    <input type="radio" id="tiempo" name="tiempo" value="mucho">
+                </fieldset>
+                <button type="button" onclick="mostrarCliente()">Enviar</button>
+            </form>
+        </div>
+    </main>
+    
+</body>
+</html>
