@@ -57,15 +57,21 @@ const stock = [
 
 const catalogo = document.getElementById("product-container")
 
-stock.forEach((producto) => {
-    const div = document.createElement("div")
-    div.className = "product"
+stock.forEach((producto, indice) => {
+    const div = document.createElement("div");
+    div.className = "product";
     div.innerHTML = `
-                    <img src="${producto.img}"/>
-                    <p>${producto.nombre} ${producto.cantidadML}ML</p>
-                    <p>$${producto.precio}</p>
-                    <a href="#" class="btn">Agregar al carrito</a>
-                    ` 
-    catalogo.appendChild(div)
-})
-
+                      <img src="${producto.img}"/>
+                      <p>${producto.nombre} ${producto.cantidadML}ML</p>
+                      <p>$${producto.precio}</p>
+                      <button class="buy-btn" onClick="addToCart(${indice})" >Agregar al carrito</button>
+                      `;
+    catalogo.appendChild(div);
+  });
+  
+  let cart = [];
+  
+  addToCart = (indiceDelProducto) => {
+    cart.push(stock[indiceDelProducto]);
+    console.log(cart);
+  };
