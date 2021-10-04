@@ -55,7 +55,7 @@ const stock = [
     }
 ]
 
-const catalogo = document.getElementById("product-container")
+const catalogo = document.getElementById("product-container");
 
 stock.forEach((producto, indice) => {
     const div = document.createElement("div");
@@ -67,11 +67,55 @@ stock.forEach((producto, indice) => {
                       <button class="buy-btn" onClick="addToCart(${indice})" >Agregar al carrito</button>
                       `;
     catalogo.appendChild(div);
-  });
-  
-  let cart = [];
-  
-  addToCart = (indiceDelProducto) => {
+});
+
+let cart = [];
+
+addToCart = (indiceDelProducto) => {
     cart.push(stock[indiceDelProducto]);
-    console.log(cart);
-  };
+    actualizarCarrito();
+};
+
+const abrirCarrito = document.getElementById("open-cart");
+const cerrarCarrito = document.getElementById("close-cart");
+const carritoContainer = document.getElementsByClassName("cart-container")[0];
+
+abrirCarrito.addEventListener("click", () => {
+    carritoContainer.classList.add("cart-opened");
+});
+
+cerrarCarrito.addEventListener("click", () => {
+    carritoContainer.classList.remove("cart-opened");
+});
+
+const selectedProducts = document.getElementById("cart");
+
+const actualizarCarrito = () => {
+    cart.forEach((product, index) => {
+        const div = document.createElement("div");
+        div.className = "selected-product";
+        div.innerHTML = `
+                          <img src="${product.img}"/>
+                          <div class="product-details">
+                            <p>${product.nombre} ${product.cantidadML}ML</p>
+                            <p>$${product.precio}</p>
+                          </div>
+                          <button id="remove-product" onClick="removeProduct(${index})">Eliminar producto</button>
+                          `;
+        selectedProducts.appendChild(div);
+    });
+    limpiarCarrito()
+};
+
+const limpiarCarrito = () => {
+    cart = [];
+}
+
+const eliminarProducto = document.getElementById('remove-product')
+
+const removeProduct = () => {
+    eliminarProducto.addEventListener("click", (i) => {
+        selectedProducts.removeChild(i)
+    })
+}
+
