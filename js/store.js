@@ -88,9 +88,10 @@ cerrarCarrito.addEventListener("click", () => {
     carritoContainer.classList.remove("cart-opened");
 });
 
-const selectedProducts = document.getElementById("cart");
+const selectedProducts = document.getElementById("cartProducts");
 
 const actualizarCarrito = () => {
+    selectedProducts.innerHTML = "";
     cart.forEach((product, index) => {
         const div = document.createElement("div");
         div.className = "selected-product";
@@ -104,18 +105,9 @@ const actualizarCarrito = () => {
                           `;
         selectedProducts.appendChild(div);
     });
-    limpiarCarrito()
 };
 
-const limpiarCarrito = () => {
-    cart = [];
+removeProduct = (i) => {
+    cart.splice(i, 1)
+    actualizarCarrito()
 }
-
-const eliminarProducto = document.getElementById('remove-product')
-
-const removeProduct = () => {
-    eliminarProducto.addEventListener("click", (i) => {
-        selectedProducts.removeChild(i)
-    })
-}
-
