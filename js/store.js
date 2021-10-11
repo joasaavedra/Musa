@@ -71,9 +71,10 @@ stock.forEach((producto, indice) => {
 
 let cart = [];
 
-addToCart = (indiceDelProducto) => {
-    cart.push(stock[indiceDelProducto]);
-    actualizarCarrito();
+const addToCart = (indiceDelProducto) => {
+    cart.push(stock[indiceDelProducto])
+    actualizarCarrito()
+    carritoStorage()
 };
 
 const abrirCarrito = document.getElementById("open-cart");
@@ -103,11 +104,15 @@ const actualizarCarrito = () => {
                           </div>
                           <button id="remove-product" onClick="removeProduct(${index})">Eliminar producto</button>
                           `;
-        selectedProducts.appendChild(div);
+        selectedProducts.appendChild(div)
     });
 };
 
-removeProduct = (i) => {
+const removeProduct = (i) => {
     cart.splice(i, 1)
     actualizarCarrito()
+}
+
+const carritoStorage = () => {
+    localStorage.setItem('carrito', JSON.stringify(cart))
 }
