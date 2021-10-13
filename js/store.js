@@ -119,8 +119,10 @@ const carritoStorage = () => {
 }
 
 const loadStorage = () => {
-    cart = JSON.parse(localStorage.getItem('carrito'))
-    actualizarCarrito()
+    if (localStorage.getItem("carrito")) {
+      cart = JSON.parse(localStorage.getItem("carrito"))
+      actualizarCarrito()
+    }
 }
 
 loadStorage()
