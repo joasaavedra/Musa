@@ -126,3 +126,12 @@ const loadStorage = () => {
 }
 
 loadStorage()
+
+$('#buy').click(() => {
+    $('.cart-container').removeClass("cart-opened")
+    $('.detallesCompraContainer').addClass("detallesCompraAbierto")
+})
+
+$('#cerrarDetalles').click(() => {
+    $('.detallesCompraContainer').removeClass("detallesCompraAbierto")
+})

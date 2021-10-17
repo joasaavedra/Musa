@@ -150,7 +150,14 @@ nav {
     align-items: flex-start;
 }
 
-#remove-product {
+#cartButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#remove-product, #buy {
     background: #d4af39;
     height: fit-content;
     padding: 1vh;
@@ -160,6 +167,10 @@ nav {
     font-family: 'Lexend Zetta', sans-serif;
     font-size: small;
     margin-left: 1vw;
+}
+
+#buy:hover {
+    background: #ecc74c;    
 }
 
 #remove-product:hover {
@@ -178,5 +189,56 @@ nav {
 }
 
 #close-cart:hover {
+    background: #ecc74c; 
+}
+
+.detallesCompraContainer {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(212, 175, 57, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s ease-in;
+}
+
+.detallesCompraAbierto {
+    visibility: visible;
+    opacity: 1;
+}
+
+#detallesCompra {
+    background: white;
+    width: 30vw;
+    height: 40vh;
+    border-radius: 5px;
+    padding: 2vw;
+    display: flex;
+    flex-direction: column;
+}
+
+#detallesCompra p {
+    padding: 2vh;
+}
+
+#cerrarDetalles {
+    background: #d4af39;
+    height: fit-content;
+    width: fit-content;
+    padding: 1vh;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Lexend Zetta', sans-serif;
+    font-size: small;
+    margin-left: 1vw;
+    align-self: flex-end;
+}
+
+#cerrarDetalles:hover {
     background: #ecc74c; 
 }

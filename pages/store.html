@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <!-- CSS -->
     <link rel="stylesheet" href="../styles/store.css">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <!-- JS -->
     <script defer src="../js/store.js"></script>
 </head>
@@ -59,7 +61,18 @@
                 <div id="cartProducts">
                     <!-- STORE.JS -->
                 </div>
-                <button id="close-cart">Seguir comprando</button>
+                <div id="cartButtons">
+                    <button id="close-cart">Seguir comprando</button>
+                    <button id="buy">Comprar</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="detallesCompraContainer">
+            <div id="detallesCompra">
+                <button id="cerrarDetalles">X</button>
+                <p>Ya podes pasar a retirar tus productos por nuestro local!</p>
+                <p>Muchas gracias por tu compra!💝</p>
             </div>
         </div>
     </main>
