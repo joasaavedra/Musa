@@ -80,4 +80,11 @@ $('#buy').click(() => {
 
 $('#cerrarDetalles').click(() => {
     $('.detallesCompraContainer').removeClass("detallesCompraAbierto")
+    vaciarCarrito()
 })
+
+const vaciarCarrito = () => {
+    selectedProducts.innerHTML = ""
+    cart = []
+    localStorage.setItem('carrito', JSON.stringify(cart))
+}
