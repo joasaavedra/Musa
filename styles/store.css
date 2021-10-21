@@ -130,6 +130,7 @@ nav {
     padding: 2vw;
     display: flex;
     flex-direction: column;
+    overflow: scroll;
 }
 
 .selected-product {
