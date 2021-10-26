@@ -1,0 +1,54 @@
+/* MAIN */
+#ubicacionContainer {
+    display: flex;
+    flex-direction: row;
+    padding: 8vh 2vw 10vh 5vw;
+}
+
+#ubicacion {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5vw 0 0 2.5vw;
+    align-items: center;
+}
+
+#musaUbicacionImg {
+    height: 80vh;
+}
+
+#musaUbicacion {
+    font-size: larger;
+    line-height: 4.5vh;
+}
+
+#direccionYHorarios {
+    display: flex;
+    flex-direction: row;
+    padding-top: 4vh;
+}
+
+#direccionContainer, #horariosContainer {
+    padding-top: 4vh;
+    width: 30vw;
+}
+
+#contactoContainer {
+    display: flex;
+    flex-direction: row;
+    font-size: 3vw;
+    justify-content: space-around;
+    width: 25vw;
+    padding-top: 10vh;
+}
+
+#insta {
+    color: rgb(148, 13, 13);
+}
+
+#whatsapp {
+    color: rgb(41, 167, 41);
+}
+
+#mail {
+    color: rgb(64, 64, 200);
+}
