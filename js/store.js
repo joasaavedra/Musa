@@ -38,7 +38,7 @@ cerrarCarrito.addEventListener("click", () => {
 const selectedProducts = document.getElementById("cartProducts")
 
 const actualizarCarrito = () => {
-    selectedProducts.innerHTML = "";
+    selectedProducts.innerHTML = ""
     cart.forEach((product, index) => {
         const div = document.createElement("div");
         div.className = "selected-product"

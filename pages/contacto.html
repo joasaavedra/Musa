@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="../styles/contacto.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- JS -->
+    <script defer src="../js/turnos.js"></script>
 </head>
 <body>
     <header id="container">
@@ -51,6 +53,8 @@
             <img id="musaUbicacionImg" src="../img/ubicacion2.jpg" alt="MUSA por fuera"/>
             <div id="ubicacion">
                 <p id="musaUbicacion">Vení a visitar nuestro salón ubicado en la zona más linda de Nueva Córdoba para atenderte con los mejores profesionales y disfrutar de un momento para vos.</p>
+                <p id="pTurnos">Para <strong>reservar tu turno</strong> hace click en el boton de abajo!!</p>
+                <button id="turnosBtn">Click me!</button>
                 <div id="direccionYHorarios">
                     <div id="direccionContainer">
                         <p><strong>Dirección</strong></p>
@@ -67,6 +71,46 @@
                     <a href="mailto:u.s.96@outlook.com"><i id="mail" class="far fa-envelope" target="_blank"></i></a>
                     <a href="https://goo.gl/maps/3Y7tqsbPLo7VdqDH7" target="_blank"><i class="fas fa-map-marker-alt"></i></a>
                 </div>
+            </div>
+        </div>
+
+        <div class="turneroContainer">
+            <div id="turnero">
+                <h1 id="turneroTitulo">Completá el formulario y reservá tu turno</h1>
+                <form id="formulario">  
+                    <fieldset class="fieldset">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre">
+                        <label for="apellido">Apellido:</label>
+                        <input type="text" id="apellido" name="apellido"><br>
+                    </fieldset>                 
+                    <fieldset class="fieldset">
+                        <label for="telefono">Telefono:</label>
+                        <input type="tel" id="telefono" name="telefono">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email">
+                    </fieldset>
+                    <fieldset class="fieldset">
+                        <label for="servicio">¿Qué servicio querés realizarte?</label>
+                        <input type="text" id="servicio" name="servicio">
+                    </fieldset>
+                    <fieldset class="fieldset">
+                        <label for="fecha">Fecha:</label>
+                        <input type="date" id="fecha" name="fecha">
+                        <label class="hora" for="hora">Hora:</label>
+                        <input type="time" id="hora" name="hora">
+                    </fieldset>
+                </form>
+                <div id="btnContainer">
+                    <button id="cancelarBtn">Cancelar</button>
+                    <button id="reservarBtn">Reservar</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="turnoContainer">
+            <div class="turno">
+                <button id="cerrarTurno">Cerrar</button>
             </div>
         </div>
 

@@ -52,3 +52,125 @@
 #mail {
     color: rgb(64, 64, 200);
 }
+
+/* TURNERO */
+#pTurnos {
+    font-size: larger;
+    padding-top: 9vh;
+}
+
+#turnosBtn {
+    background: #d4af39;
+    padding: 1vh;
+    margin: 1vh;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Lexend Zetta', sans-serif;
+    font-size: medium;
+}
+
+#turnosBtn:hover {
+    background: #ecc74c;
+}
+
+.turneroContainer {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(212, 175, 57, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s ease-in;
+}
+
+.turneroAbierto {
+    visibility: visible;
+    opacity: 1;
+}
+
+#turnero {
+    background: white;
+    width: 60vw;
+    height: 47vh;
+    border-radius: 5px;
+    padding: 2vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#turneroTitulo {
+    font-size: larger;
+}
+
+.fieldset {
+    border: none;
+    padding-top: 2.5vh;
+}
+
+.hora {
+    margin-left: 3vw;
+}
+
+#reservarBtn, #cancelarBtn, #cerrarTurno {
+    background: #d4af39;
+    padding: 1vh;
+    margin: 5vh;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Lexend Zetta', sans-serif;
+    font-size: medium;
+}
+
+#reservarBtn:hover {
+    background: #ecc74c;
+}
+
+#cancelarBtn:hover {
+    background: #ecc74c;
+}
+
+#btnContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.turnoContainer {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(212, 175, 57, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s ease-in;
+}
+
+.turno {
+    background: white;
+    width: 60vw;
+    height: 47vh;
+    border-radius: 5px;
+    padding: 2vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mostrarTurno {
+    visibility: visible;
+    opacity: 1;
+}
+
+#cerrarTurno:hover {
+    background: #ecc74c;
+}
