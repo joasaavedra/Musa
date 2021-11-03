@@ -9,6 +9,7 @@ let cancelar = document.getElementById("cancelarBtn")
 
 cancelar.addEventListener('click', () => {
     turnero.classList.remove("turneroAbierto")
+    limpiarCampos()
 })
 
 let turno = document.getElementsByClassName("turnoContainer")[0]
@@ -34,26 +35,19 @@ formulario.addEventListener('submit', (e) => {
     advertencias.innerHTML = ""
     if(!expresiones.nombre.test(nombre.value)){
         advertencias.innerHTML = "El nombre no es válido<br>"
-    } 
-    if(!expresiones.nombre.test(apellido.value)){
+    }else if(!expresiones.nombre.test(apellido.value)){
         advertencias.innerHTML += "El apellido no es válido<br>"
-    }
-    if(!expresiones.telefono.test(telefono.value)){
+    }else if(!expresiones.telefono.test(telefono.value)){
         advertencias.innerHTML += "El telefono no es válido<br>"
-    }
-    if(!expresiones.correo.test(email.value)){
+    }else if(!expresiones.correo.test(email.value)){
         advertencias.innerHTML += "El email no es válido<br>"
-    }
-    if(servicio.value.length < 4){
+    }else if(servicio.value.length < 4){
         advertencias.innerHTML += "El servicio no es válido<br>"
-    }
-    if(!fecha.value){
+    }else if(!fecha.value){
         advertencias.innerHTML += "Por favor ingrese una fecha<br>"
-    }
-    if(!hora.value){
+    }else if(!hora.value){
         advertencias.innerHTML += "Por favor ingrese la hora"
-    }
-    else {
+    }else{
         turnero.classList.remove("turneroAbierto")
         turno.classList.add("mostrarTurno")
         actualizarMensaje()
