@@ -6,6 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MUSA - Servicios</title>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <!-- Lexend Zeta Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +16,10 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <!-- CSS -->
   <link rel="stylesheet" href="../styles/index.css">
+  <link rel="stylesheet" href="../styles/store.css">
   <link rel="stylesheet" href="../styles/servicios.css">
+  <!-- JS -->
+  <script defer src="../js/store.js"></script>
 </head>
 
 <body>
@@ -52,7 +57,7 @@
 
     <section>
       <article class="servicio">
-        <h1>Peluqueria</h1>
+        <h1>Peluquería</h1>
         <div class="slider-container">
           <ul class="slider">
             <li id="slide1">
@@ -163,6 +168,32 @@
         </div>
       </article>
     </section>
+
+    <div id="sacar">
+      <div id="product-container">
+          <!-- STORE.JS -->
+      </div>
+  </div>
+  
+  <div class="cart-container">
+      <div id="cart">
+          <div id="cartProducts">
+              <!-- STORE.JS -->
+          </div>
+          <div id="cartButtons">
+              <button id="close-cart">Seguir comprando</button>
+              <button id="buy">Comprar</button>
+          </div>
+      </div>
+  </div>
+
+  <div class="detallesCompraContainer">
+      <div id="detallesCompra">
+          <button id="cerrarDetalles">X</button>
+          <p>Ya podes pasar a retirar tus productos por nuestro local!</p>
+          <p>Muchas gracias por tu compra!💝</p>
+      </div>
+  </div>
 
   </main>
 

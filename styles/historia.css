@@ -14,3 +14,7 @@
     font-size: larger;
     line-height: 4.5vh;
 }
+
+#sacar {
+    display: none;
+}

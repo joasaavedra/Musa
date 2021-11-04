@@ -5,15 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MUSA - Precios</title>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <!-- Lexend Zeta Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend+Zetta:wght@100;200;300;400&display=swap" rel="stylesheet">
     <!-- CSS -->
     <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/store.css">
     <link rel="stylesheet" href="../styles/precios.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- JS -->
+    <script defer src="../js/store.js"></script>
 </head>
 <body>
     
@@ -149,6 +154,32 @@
                             <p class="precio">$1000</p>
                         </div>
                     </div>
+                </div>
+            </div>
+
+            <div id="sacar">
+                <div id="product-container">
+                    <!-- STORE.JS -->
+                </div>
+            </div>
+            
+            <div class="cart-container">
+                <div id="cart">
+                    <div id="cartProducts">
+                        <!-- STORE.JS -->
+                    </div>
+                    <div id="cartButtons">
+                        <button id="close-cart">Seguir comprando</button>
+                        <button id="buy">Comprar</button>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="detallesCompraContainer">
+                <div id="detallesCompra">
+                    <button id="cerrarDetalles">X</button>
+                    <p>Ya podes pasar a retirar tus productos por nuestro local!</p>
+                    <p>Muchas gracias por tu compra!💝</p>
                 </div>
             </div>
 

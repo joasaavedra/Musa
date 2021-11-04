@@ -72,3 +72,7 @@ ul.slider li:target {
     height: 2.6vh;
     border-radius: 100%;
 }
+
+#sacar {
+    display: none;
+}

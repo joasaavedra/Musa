@@ -35,3 +35,7 @@
 .tratamientoExtra, .precioExtra, .precioNull, .tratamientoPestanias {
     padding-top: 4vh;
 }
+
+#sacar {
+    display: none;
+}
